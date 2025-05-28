@@ -4,7 +4,7 @@ import (
 	"net"
 	"slices"
 
-	"audit-admin/utils/stringutil"
+	"github.com/SisyphusSQ/golib/utils/stringutil"
 )
 
 func GetIP() (ipv4 string, err error) {

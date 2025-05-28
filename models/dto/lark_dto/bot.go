@@ -1,4 +1,4 @@
-package lark
+package lark_dto
 
 type Content struct {
 	Tag    string `json:"tag,omitempty"`

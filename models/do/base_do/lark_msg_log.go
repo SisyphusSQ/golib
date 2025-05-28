@@ -1,4 +1,4 @@
-package common
+package base_do
 
 import "time"
 
@@ -8,7 +8,7 @@ type LarkMsgLog struct {
 	MessageID   string    `gorm:"column:message_id" json:"message_id"`
 	Contacts    string    `gorm:"column:contacts" json:"contacts"`
 	Status      Status    `gorm:"column:send_status" json:"send_status"`
-	FromMethod  FromType  `gorm:"column:from_method" json:"from_method"`
+	FromMethod  string    `gorm:"column:from_method" json:"from_method"`
 	SendMessage string    `gorm:"column:send_message" json:"send_message"`
 	Response    string    `gorm:"column:response" json:"response"`
 	CreatedAt   time.Time `gorm:"column:created_at" json:"created_at"`
@@ -18,13 +18,6 @@ type LarkMsgLog struct {
 func (LarkMsgLog) TableName() string {
 	return "lark_msg_log"
 }
-
-type FromType string
-
-const (
-	ChangeState  FromType = "change_state"
-	WeeklyReport FromType = "weekly_report"
-)
 
 type Status int8
 
