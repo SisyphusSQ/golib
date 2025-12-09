@@ -3,6 +3,7 @@ package ob_dto
 type Tag map[string]string
 
 type BaseReq struct {
+	Region      string `json:"region"`
 	ClientToken string `json:"clientToken"`
 
 	// cluster
