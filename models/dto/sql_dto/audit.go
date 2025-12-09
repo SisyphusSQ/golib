@@ -3,7 +3,7 @@ package sql_dto
 type AuditSQLRecord struct {
 	Cluster         string   `gorm:"column:cluster" json:"cluster"`
 	ClusterID       int64    `gorm:"column:cluster_id" json:"cluster_id"`
-	ClusterVendor   string   `gorm:"column:cluster_vendor" json:"cluster_vendor"`
+	ClusterVendor   int      `gorm:"column:cluster_vendor" json:"cluster_vendor"`
 	Digest          string   `gorm:"column:digest" json:"digest"`
 	DB              string   `gorm:"column:db" json:"db"`
 	Cmd             string   `gorm:"column:cmd" json:"cmd"`
