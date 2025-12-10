@@ -39,3 +39,33 @@ type ExplainInfo struct {
 	Filtered     float64 `json:"filtered" gorm:"column:filtered"`
 	Extra        string  `json:"Extra" gorm:"column:Extra"`
 }
+
+type BadRecord struct {
+	ID                int64  `gorm:"primaryKey;column:id" json:"id"`
+	Digest            string `gorm:"column:digest" json:"digest"`
+	ClientUser        string `gorm:"column:client_user" json:"client_user"`
+	DB                string `gorm:"column:db" json:"db"`
+	Cmd               string `gorm:"column:cmd" json:"cmd"`
+	SQLExample        string `gorm:"column:sql_example" json:"sql_example"`
+	NoIndexUsed       int8   `gorm:"column:no_index_used" json:"no_index_used"`
+	NoGoodIndexUsed   int8   `gorm:"column:no_good_index_used" json:"no_good_index_used"`
+	SortScan          int8   `gorm:"column:sort_scan" json:"sort_scan"`
+	AvgExecTime       int64  `gorm:"column:avg_exec_time" json:"avg_exec_time"`
+	MaxExecTime       int64  `gorm:"column:max_exec_time" json:"max_exec_time"`
+	AvgSentRows       int64  `gorm:"column:avg_sent_rows" json:"avg_sent_rows"`
+	MaxSentRows       int64  `gorm:"column:max_sent_rows" json:"max_sent_rows"`
+	AvgRowsExamined   int64  `gorm:"column:avg_rows_examined" json:"avg_rows_examined"`
+	MaxRowsExamined   int64  `gorm:"column:max_rows_examined" json:"max_rows_examined"`
+	AvgAffectedRows   int64  `gorm:"column:avg_affected_rows" json:"avg_affected_rows"`
+	MaxAffectedRows   int64  `gorm:"column:max_affected_rows" json:"max_affected_rows"`
+	AvgLockTime       int64  `gorm:"column:avg_lock_time" json:"avg_lock_time"`
+	MaxLockTime       int64  `gorm:"column:max_lock_time" json:"max_lock_time"`
+	AvgSortRows       int64  `gorm:"column:avg_sort_rows" json:"avg_sort_rows"`
+	MaxSortRows       int64  `gorm:"column:max_sort_rows" json:"max_sort_rows"`
+	ExecTimeCount     int64  `gorm:"-" json:"exec_time_count"`
+	SentRowsCount     int64  `gorm:"-" json:"sent_rows_count"`
+	RowsExaminedCount int64  `gorm:"-" json:"rows_examined_count"`
+	AffectedRowsCount int64  `gorm:"-" json:"affected_rows_count"`
+	LockTimeCount     int64  `gorm:"-" json:"lock_time_count"`
+	SortRowsCount     int64  `gorm:"-" json:"sort_rows_count"`
+}
