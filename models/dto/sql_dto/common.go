@@ -33,7 +33,7 @@ type ExplainInfo struct {
 	Type         string  `json:"type" gorm:"column:type"`
 	PossibleKeys string  `json:"possible_keys" gorm:"column:possible_keys"`
 	Key          string  `json:"key" gorm:"column:key"`
-	KeyLen       int     `json:"key_len" gorm:"column:key_len"`
+	KeyLen       string  `json:"key_len" gorm:"column:key_len"`
 	Ref          string  `json:"ref" gorm:"column:ref"`
 	Rows         int     `json:"rows" gorm:"column:rows"`
 	Filtered     float64 `json:"filtered" gorm:"column:filtered"`
